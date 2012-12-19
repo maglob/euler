@@ -1,0 +1,7 @@
+(defun euler-29()
+  (let ((ht (make-hash-table)))
+    (do ((a 2 (1+ a)))
+	((> a 100) (hash-table-count ht))
+      (do ((b 2 (1+ b)))
+	  ((> b 100))
+	(setf (gethash (expt a b) ht) t)))))
